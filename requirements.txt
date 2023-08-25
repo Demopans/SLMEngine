@@ -1,0 +1,6 @@
+// for beta, poc dev. If this is going to be an actual thing, there exists C++ and Rust(beta) bindings for torch
+torch=2.0.1+cu118
+scipy
+pandas
+scikit-learn
+safetensors
