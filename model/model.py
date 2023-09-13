@@ -2,13 +2,17 @@
 import torch
 import sys
 
-def initModel(model: torch.nn.Module, config: str):
-    # attach safetensored model to blank model
+class lm:
+    model: torch.nn.Module
 
-    pass
+    def initModel(self, config: str):
+        # attach safetensored model to blank model
 
-def infer():
-    pass
+        pass
 
-def tune():
-    pass
+    def infer(self):
+        pass
+
+    def tune(self):
+        pass
+
