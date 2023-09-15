@@ -2,9 +2,12 @@
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    import torch
+    import torch, model.model
 
+
+
+    model.model.LM("")
     # debug
-    print(torch.cuda.is_available())
+    print()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

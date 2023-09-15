@@ -4,3 +4,5 @@ scipy
 pandas
 scikit-learn
 safetensors
+transformers
+auto-gptq
