@@ -6,7 +6,7 @@ if __name__ == '__main__':
 
 
 
-    model.model.LM("")
+    model.model.LM("./model/config.txt")
     # debug
     print()
 

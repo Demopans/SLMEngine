@@ -1,1 +1,1 @@
-"./Wizard-Vicuna-7B-Uncensored-GPTQ/Wizard-Vicuna-7B-Uncensored-GPTQ-4bit-128g.no-act-order.safetensors"
+"./Wizard-Vicuna-7B-Uncensored-GPTQ"

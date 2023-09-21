@@ -3,6 +3,6 @@ torch=2.0.1+cu118
 scipy
 pandas
 scikit-learn
-safetensors
 transformers
 auto-gptq
+optimum>=1.12.0
