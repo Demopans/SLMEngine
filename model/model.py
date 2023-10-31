@@ -1,9 +1,9 @@
 # General torch model bindings. infrence.py and fineTune.py contain the bit that actually run infrence and fineTune respectively
-import torch
+import torch, transformers
 
 
 class LM:
-    model: torch.nn.Module
+    model: transformers.Pipeline
 
     def __init__(self, config: str):
         import os.path as osp
@@ -22,15 +22,16 @@ class LM:
 
         # note: Triton is currently bugged on Python 3.11
         modelPath = "./model/Wizard-Vicuna-7B-Uncensored-GPTQ"
-        self.model = AutoModelForCausalLM.from_pretrained(modelPath, device_map="cuda")
-        self.tokenizer = AutoTokenizer.from_pretrained(modelPath)
+        self.model = transformers.pipeline("text-generation", model=modelPath,tokenizer=modelPath)
         self.memory: str
 
     def infer(self, input="Hello, my name is"):
-        inputs = self.tokenizer(input, return_tensors="pt")
-        inputs = inputs.to(0)
-        output = self.model.generate(inputs["input_ids"])
+        output = self.model(input)
         print(output)
+
+        # process tokens
+
+        
         pass
 
     def tune(self):

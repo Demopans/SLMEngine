@@ -6,7 +6,8 @@ if __name__ == '__main__':
 
 
 
-    model.model.LM("./model/config.txt")
+    mod = model.model.LM("./model/config.txt")
+    mod.infer()
     # debug
     print()
 
